@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 2861673627
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a5be5e636b48d87cf5632cdfb37dc89c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: a5be5e636b48d87cf5632cdfb37dc89c
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_shield.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_right-top.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/Button_11.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_left-top.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_top.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_neck.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_gloves.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_chest.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/Background_02.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/Button_05.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/Button_04.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_right-bot.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_left.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_bot.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_helm.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_weapon.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_left-bot.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_boots.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/Button_23.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/Background_01.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/Background_06.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/FRAME_right.png
+- Assets/Asset Packs/Fantasy RPG UI/UI/Parts/InventoryButton_pants.png
+Dependencies: []

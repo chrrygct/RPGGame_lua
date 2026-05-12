@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090cca9fd559f8a46a34db8b5d6e9c0a, type: 3}
+  m_Name: ManaPotion
+  m_EditorClassIdentifier: 
+  itemID: 6f6632f3-d6b5-4604-b14d-09cbcbb09cad
+  displayName: ManaPotion
+  description: this is ManaPotion
+  icon: {fileID: 21300000, guid: f1dd815974b2d4240a6bc912d6585497, type: 3}
+  pickup: {fileID: 1471398574313987055, guid: b2f091a715ebe8d4c9e2bbbd0594fff2, type: 3}
+  stackable: 1
+  price: 4
+  consumable: 1
