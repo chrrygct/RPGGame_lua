@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+	<!--枚举配置规则-->
+	<!--数据结构类配置规则-->
+	<!--消息类配置规则-->
+	<!--注册-->
+	<message id="1001" name="RegisterMsg" namespace="GameLogin">
+		<field type="string" name="account"/>
+		<field type="string" name="password"/>
+	</message>
+	<!--注册结果 服务器->客户端 result:0成功 非0失败 info:提示文字-->
+	<message id="1005" name="RegisterResultMsg" namespace="GameLogin">
+		<field type="int" name="result"/>
+		<field type="string" name="info"/>
+	</message>
+	<!--登录-->
+	<message id="1004" name="LoginMsg" namespace="GameLogin">
+		<field type="string" name="account"/>
+		<field type="string" name="password"/>
+	</message>
+	<!--登录结果 服务器->客户端 result:0成功 非0失败 info:提示文字-->
+	<message id="1006" name="LoginResultMsg" namespace="GameLogin">
+		<field type="int" name="result"/>
+		<field type="string" name="info"/>
+	</message>
+	<!--心跳-->
+	<message id="1002" name="HeartMsg" namespace="GameSystem"/>
+	<!--退出-->
+	<message id="1003" name="QuitMsg" namespace="GameSystem"/>
+	<!--保存存档 client->server account + saveData(byte[])-->
+	<message id="1007" name="SaveMsg" namespace="GameSystem">
+		<field type="string" name="account"/>
+		<field type="array" data="byte" name="saveData"/>
+	</message>
+	<!--保存结果 server->client result:0成功 非0失败 info:提示文字-->
+	<message id="1008" name="SaveResultMsg" namespace="GameSystem">
+		<field type="int" name="result"/>
+		<field type="string" name="info"/>
+	</message>
+	<!--读取存档 client->server-->
+	<message id="1009" name="LoadMsg" namespace="GameSystem">
+		<field type="string" name="account"/>
+	</message>
+	<!--读取结果 server->client result:0有存档 非0无存档/失败 saveData可能为空-->
+	<message id="1010" name="LoadResultMsg" namespace="GameSystem">
+		<field type="int" name="result"/>
+		<field type="string" name="info"/>
+		<field type="array" data="byte" name="saveData"/>
+	</message>
+</messages>

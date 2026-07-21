@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab41dae10bebfdf49945bc77b4da8e9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 80b1c61b67e34237ba8a5538d07f428c, type: 3}
   m_Name: Dagger
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   itemID: 434f4889-a2a3-427c-955a-5c068a6790a3
   displayName: Dagger
   description: This is Dagger
   icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
-  pickup: {fileID: 1471398574313987055, guid: b2f091a715ebe8d4c9e2bbbd0594fff2, type: 3}
+  pickup: {fileID: 7934110300459798776, guid: 1bf9dcb2308102942a3e2b28aabaa54b, type: 3}
   stackable: 1
   price: 1
   allowedEquipLocation: 5
+  weaponConfig: {fileID: 11400000, guid: 753d25aa24c6dc848bf9ee3a2bd1ee50, type: 2}

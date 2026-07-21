@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 1037783413742566630, guid: fb3541f2bd402c542a7328e146e645cf, type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 6309e070ffb694146af9ecd8e44f3ba3, type: 2}
+      objectReference: {fileID: 11400000, guid: 55a7dcacec47c004a879dbc303d2d768, type: 2}
     - target: {fileID: 1037783413742566630, guid: fb3541f2bd402c542a7328e146e645cf, type: 3}
       propertyPath: handTransform
       value: 
@@ -187,7 +187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981815722809620822, guid: fb3541f2bd402c542a7328e146e645cf, type: 3}
       propertyPath: m_StoppingDistance
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2144103884399257036, guid: fb3541f2bd402c542a7328e146e645cf, type: 3}

@@ -10,7 +10,7 @@ namespace RPG.Stats
         [SerializeField] ProgressionCharacterClass[] characterClasses=null ;
         Dictionary<CharacterClass, Dictionary<Stat, float[]>> lookupTable = null;
 
-
+        //函数的作用是根据角色职业、属性类型和等级来获取对应的属性值。
         public float GetStat(Stat stat, CharacterClass characterClass, int level)
         {
             BuildLookup();

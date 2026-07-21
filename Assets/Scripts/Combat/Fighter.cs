@@ -8,6 +8,7 @@ using RPG.Stats;
 using System.Collections.Generic;
 using System.Collections;
 using GameDevTV.Utils;
+using RPG.Inventories;
 namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour,IAction,ISaveable,IModifierProvider
@@ -20,9 +21,10 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform=null;
         [SerializeField] Transform leftHandTransform=null;
         [SerializeField] WeaponConfig defaultWeapon=null;
-        //[SerializeField] string defaultWeaponName="Unarmed"; 
+        //[SerializeField] string defaultWeaponName="Unarmed";
 
         Health target;
+        Equipment equipment;
         float timeSinceLastAttack= Mathf.Infinity;
         WeaponConfig currentWeaponConfig;
         LazyValue<Weapon> currentWeapon;
@@ -31,7 +33,11 @@ namespace RPG.Combat
         {
             currentWeaponConfig = defaultWeapon;
             currentWeapon = new LazyValue<Weapon>(SetupDefaultWeapon);
-
+            equipment = GetComponent<Equipment>();
+            if (equipment != null)
+            {
+                equipment.equipmentUpdated += UpdateWeapon;
+            }
         }
 
         private Weapon SetupDefaultWeapon()
@@ -42,6 +48,21 @@ namespace RPG.Combat
         void Start()
         {
            currentWeapon.ForceInit();
+        }
+
+        private void UpdateWeapon()
+        {
+            var equipped = equipment.GetItemInSlot(EquipLocation.Weapon);
+            if (equipped == null)
+            {
+                EquipWeapon(defaultWeapon);
+                return;
+            }
+            var weaponItem = equipped as WeaponItem;
+            if (weaponItem != null && weaponItem.GetWeapon() != null)
+            {
+                EquipWeapon(weaponItem.GetWeapon());
+            }
         }
 
         public void EquipWeapon(WeaponConfig weapon)
@@ -109,7 +130,7 @@ namespace RPG.Combat
 
         private void AttackBehavior()
         {
-             transform.LookAt(target.transform);
+            transform.LookAt(target.transform);
             if (timeSinceLastAttack > timeBetweenAttacks)
             {
                 TriggerAttack();
@@ -181,6 +202,11 @@ namespace RPG.Combat
 
         public void RestoreState(object state)
         {
+            if (equipment != null && equipment.GetItemInSlot(EquipLocation.Weapon) is WeaponItem)
+            {
+                // Equipment.RestoreState will fire equipmentUpdated and rebuild the weapon.
+                return;
+            }
             string weaponName = (string)state;
             WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
             EquipWeapon(weapon);

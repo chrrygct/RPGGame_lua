@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b1c61b67e34237ba8a5538d07f428c, type: 3}
+  m_Name: Bow
+  m_EditorClassIdentifier:
+  itemID: 84d57386-af34-4218-9ccb-abf608a7912e
+  displayName: Bow
+  description: This is Bow
+  icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
+  pickup: {fileID: 2649285338263461067, guid: 5d0c9e747f24826429b971ff5f7a6cdc, type: 3}
+  stackable: 1
+  price: 1
+  allowedEquipLocation: 5
+  weaponConfig: {fileID: 11400000, guid: abb98c7f7cdc1864ea96ff6727afabeb, type: 2}

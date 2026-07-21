@@ -41,7 +41,7 @@ namespace RPG.SceneManagement
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
             //Load current level
-            savingWrapper.Load();
+            yield return savingWrapper.RestoreCurrentSceneFromServer();
 
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);

@@ -14,6 +14,7 @@ namespace RPG.Inventories
 
         // CACHED REFERENCE
         Inventory inventory;
+        Equipment equipment;
 
         // LIFECYCLE METHODS
 
@@ -21,6 +22,7 @@ namespace RPG.Inventories
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             inventory = player.GetComponent<Inventory>();
+            equipment = player.GetComponent<Equipment>();
         }
 
         // PUBLIC
@@ -52,6 +54,12 @@ namespace RPG.Inventories
 
         public void PickupItem()
         {
+            if (TryAutoEquip())
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             bool foundSlot = inventory.AddToFirstEmptySlot(item, number);
             if (foundSlot)
             {
@@ -61,7 +69,26 @@ namespace RPG.Inventories
 
         public bool CanBePickedUp()
         {
+            if (CanAutoEquip()) return true;
             return inventory.HasSpaceFor(item);
+        }
+
+        // PRIVATE
+
+        private bool CanAutoEquip()
+        {
+            if (equipment == null) return false;
+            var equipable = item as EquipableItem;
+            if (equipable == null) return false;
+            return equipment.GetItemInSlot(equipable.GetAllowedEquipLocation()) == null;
+        }
+
+        private bool TryAutoEquip()
+        {
+            if (!CanAutoEquip()) return false;
+            var equipable = (EquipableItem)item;
+            equipment.AddItem(equipable.GetAllowedEquipLocation(), equipable);
+            return true;
         }
     }
 }

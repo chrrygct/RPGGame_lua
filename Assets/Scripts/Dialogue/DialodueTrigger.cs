@@ -48,7 +48,6 @@ namespace RPG.Dialogue
             {
                 if (a.action == actionToTrigger)
                 {
-                    Debug.Log("Triggering dialogue action: " + a.action);
                     a.onTrigger.Invoke();
                 }
             }

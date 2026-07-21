@@ -43,12 +43,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3766243346594360817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35db88680b5c824594cd78139060c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
-  respawnTime: 5
+  m_Script: {fileID: 11500000, guid: 6b532c87ae564d38a439f716dfa4d30b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
   healthToRestore: 20
+  respawnTime: 5
 --- !u!135 &7664322211237027513
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -28,6 +28,8 @@ namespace RPG.Stats
         public void RestoreState(object state)
         {
             experiencePoints = (float)state;
+            // 恢复经验值后必须触发事件，让 BaseStats 刷新缓存的等级
+            onExperienceGained?.Invoke();
         }
 
         public float GetExperiencePoints()
